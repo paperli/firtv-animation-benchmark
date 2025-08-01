@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
 import './styles/design-system.css'
 import './App.css'
+import { RiveSpinner1 } from './components/RiveSpinner1'
+import { RiveSpinner2 } from './components/RiveSpinner2'
+import { CssSpinner } from './components/CssSpinner'
 
 function App() {
   const [selectedAnimation, setSelectedAnimation] = useState<string>('')
@@ -55,6 +58,20 @@ function App() {
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [focusedIndex])
+
+  // Render the selected animation
+  const renderAnimation = () => {
+    switch (selectedAnimation) {
+      case 'rive-spinner-1':
+        return <RiveSpinner1 />
+      case 'rive-spinner-2':
+        return <RiveSpinner2 />
+      case 'css-spinner':
+        return <CssSpinner />
+      default:
+        return null
+    }
+  }
 
   return (
     <div className="tv-container bg-primary">
@@ -122,9 +139,7 @@ function App() {
             <h2 className="text-3xl font-bold tv-text mb-4">
               {animations.find(a => a.id === selectedAnimation)?.name}
             </h2>
-            <div className="text-secondary text-lg">
-              Animation placeholder - Implementation coming soon
-            </div>
+            {renderAnimation()}
             <div className="mt-6 text-sm text-tertiary">
               Press Esc to go back to navigation
             </div>
