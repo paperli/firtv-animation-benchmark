@@ -371,7 +371,7 @@
         "id": 12,
         "title": "Configure ADB Deployment",
         "description": "Set up ADB commands and build configuration for Fire TV deployment",
-        "status": "pending",
+        "status": "done",
         "priority": "medium",
         "dependencies": [
           1
@@ -383,7 +383,7 @@
       {
         "id": 13,
         "title": "Test on Fire TV Device",
-        "status": "pending",
+        "status": "in-progress",
         "priority": "high",
         "dependencies": [
           12
@@ -422,7 +422,7 @@
     ],
     "metadata": {
       "created": "2025-08-01T02:06:58.612Z",
-      "updated": "2025-08-01T02:31:58.907Z",
+      "updated": "2025-08-01T02:53:37.012Z",
       "description": "Tasks for master context"
     }
   }
