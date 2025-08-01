@@ -415,22 +415,22 @@ html {
   --tv-viewport-height: 1080px;
   --tv-aspect-ratio: 16/9;
   
-  /* Larger typography for TV viewing distance */
-  --font-size-base: 1.125rem; /* 18px base for TV */
-  --font-size-lg: 1.25rem;    /* 20px */
-  --font-size-xl: 1.5rem;     /* 24px */
-  --font-size-2xl: 1.875rem;  /* 30px */
-  --font-size-3xl: 2.25rem;   /* 36px */
-  --font-size-4xl: 3rem;      /* 48px */
+  /* Compact typography for TV viewing distance */
+  --font-size-base: 1rem;     /* 16px base for TV */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
   
-  /* Larger spacing for TV interfaces */
-  --spacing-4: 1.25rem;  /* 20px */
-  --spacing-6: 2rem;     /* 32px */
-  --spacing-8: 2.5rem;   /* 40px */
-  --spacing-12: 3.5rem;  /* 56px */
+  /* Compact spacing for TV interfaces */
+  --spacing-4: 1rem;      /* 16px */
+  --spacing-6: 1.5rem;    /* 24px */
+  --spacing-8: 2rem;      /* 32px */
+  --spacing-12: 2.5rem;   /* 40px */
   
-  /* Larger touch targets for TV navigation */
-  --min-touch-target: 60px;
+  /* Compact touch targets for TV navigation */
+  --min-touch-target: 50px;
 }
 
 /* Ensure no overflow or scrollbars on TV */
@@ -495,8 +495,8 @@ input:focus,
 
 /* TV navigation specific styles */
 .tv-nav-item {
-  padding: var(--spacing-4) var(--spacing-6);
-  margin: var(--spacing-2) 0;
+  padding: var(--spacing-3) var(--spacing-4);
+  margin: var(--spacing-1) 0;
   border-radius: var(--radius-lg);
   cursor: pointer;
   transition: all var(--transition-base);

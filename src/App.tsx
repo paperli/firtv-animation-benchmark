@@ -11,9 +11,9 @@ function App() {
   const navigationRefs = useRef<(HTMLButtonElement | null)[]>([])
 
   const animations = [
-    { id: 'rive-spinner-1', name: 'Rive Spinner 1', description: 'UI Components Spinner' },
-    { id: 'rive-spinner-2', name: 'Rive Spinner 2', description: 'Launch Loading Spinner' },
-    { id: 'css-spinner', name: 'CSS+SVG Spinner', description: 'Pure CSS Animation' }
+    { id: 'rive-spinner-1', name: 'Rive Spinner 1' },
+    { id: 'rive-spinner-2', name: 'Rive Spinner 2' },
+    { id: 'css-spinner', name: 'CSS+SVG Spinner' }
   ]
 
   // D-pad navigation handler
@@ -76,12 +76,12 @@ function App() {
   return (
     <div className="tv-container bg-primary">
       {/* Left Panel - Navigation */}
-      <div className="tv-panel w-80 bg-secondary border-r border-primary p-6">
-        <h1 className="text-2xl font-bold tv-text mb-8">
+      <div className="tv-panel w-80 bg-secondary border-r border-primary p-4">
+        <h1 className="text-xl font-bold tv-text mb-4">
           Fire TV Animation Benchmark
         </h1>
         
-        <nav className="space-y-2">
+        <nav className="space-y-1">
           {animations.map((animation, index) => (
             <button
               key={animation.id}
@@ -97,15 +97,14 @@ function App() {
               tabIndex={0}
             >
               <div className="font-medium">{animation.name}</div>
-              <div className="text-sm opacity-75">{animation.description}</div>
             </button>
           ))}
         </nav>
 
         {/* Performance Metrics Section */}
-        <div className="tv-metrics mt-8">
-          <h3 className="text-lg font-semibold tv-text mb-3">Performance</h3>
-          <div className="space-y-2 text-sm">
+        <div className="tv-metrics mt-4">
+          <h3 className="text-base font-semibold tv-text mb-2">Performance</h3>
+          <div className="space-y-1 text-sm">
             <div className="flex justify-between">
               <span className="text-secondary">FPS:</span>
               <span className="tv-text font-mono">60</span>
@@ -122,8 +121,8 @@ function App() {
         </div>
 
         {/* D-pad Navigation Instructions */}
-        <div className="mt-8 p-4 bg-tertiary rounded-lg">
-          <h4 className="text-sm font-semibold tv-text mb-2">Navigation</h4>
+        <div className="mt-4 p-3 bg-tertiary rounded-lg">
+          <h4 className="text-sm font-semibold tv-text mb-1">Navigation</h4>
           <div className="text-xs text-secondary space-y-1">
             <div>↑↓ Navigate</div>
             <div>Enter Select</div>
