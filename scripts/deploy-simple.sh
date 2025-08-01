@@ -5,6 +5,14 @@
 
 set -e
 
+# Load environment variables
+if [ -f .env ]; then
+  export $(cat .env | grep -v '^#' | xargs)
+else
+  echo "❌ .env file not found. Please copy env.example to .env and configure your settings."
+  exit 1
+fi
+
 echo "🚀 Fire TV Animation Benchmarking Tool - Quick Deploy"
 echo "==================================================="
 

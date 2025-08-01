@@ -8,8 +8,16 @@ set -e
 echo "🚀 Fire TV Animation Benchmarking Tool - Deployment Script"
 echo "========================================================"
 
+# Load environment variables
+if [ -f .env ]; then
+  export $(cat .env | grep -v '^#' | xargs)
+else
+  echo "❌ .env file not found. Please copy env.example to .env and configure your settings."
+  exit 1
+fi
+
 # Configuration
-DEVICE_IP="192.168.50.150:5555"  # Your Fire TV device IP
+DEVICE_IP="${FIRE_TV_DEVICE_IP:-192.168.50.150:5555}"
 BUILD_DIR="dist"
 REMOTE_DIR="/sdcard/Download/fire-tv-benchmark"
 
