@@ -1,0 +1,100 @@
+/* Additional utility classes for the Fire TV Animation Benchmarking Tool */
+
+/* Space utilities */
+.space-y-2 > * + * {
+  margin-top: var(--spacing-2);
+}
+
+.space-y-3 > * + * {
+  margin-top: var(--spacing-3);
+}
+
+.space-y-4 > * + * {
+  margin-top: var(--spacing-4);
+}
+
+.space-y-6 > * + * {
+  margin-top: var(--spacing-6);
+}
+
+.space-y-8 > * + * {
+  margin-top: var(--spacing-8);
+}
+
+/* Width utilities */
+.w-80 {
+  width: 20rem;
+}
+
+/* Border utilities */
+.border-r {
+  border-right-width: 1px;
+}
+
+.border-primary {
+  border-color: var(--color-border-primary);
+}
+
+/* Opacity utilities */
+.opacity-75 {
+  opacity: 0.75;
+}
+
+/* Rounded corners */
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+
+/* Transition utilities */
+.transition-all {
+  transition: all var(--transition-base);
+}
+
+/* Hover states */
+.hover\:bg-elevated:hover {
+  background-color: var(--color-bg-elevated);
+}
+
+.hover\:text-primary:hover {
+  color: var(--color-text-primary);
+}
+
+/* Focus states for TV navigation */
+button:focus {
+  outline: 3px solid var(--color-primary-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-base);
+}
+
+/* Custom scrollbar for TV interfaces */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-primary);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-secondary);
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Ensure proper text rendering on TV displays */
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+}

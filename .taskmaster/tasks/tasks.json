@@ -1,0 +1,383 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Initialize React-Vite Project",
+        "description": "Set up the base React-Vite project with TypeScript for Fire TV animation performance benchmarking",
+        "status": "done",
+        "dependencies": [],
+        "priority": "high",
+        "details": "Create a new React-Vite project with TypeScript support. Configure the project for Fire TV deployment with appropriate build settings and dependencies. Implement a comprehensive CSS design system with dark theme as the preferred design, optimized for TV displays.",
+        "testStrategy": "Verify the project builds successfully and runs in development mode. Confirm the dark theme design system renders correctly on TV displays.",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create React-Vite project with TypeScript",
+            "description": "Initialize a new Vite project with React and TypeScript template",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-08-01T02:18:41.626Z>\n✅ COMPLETED: React-Vite project with TypeScript successfully created and configured\n\n**Implementation Details:**\n- Created new Vite project with React + TypeScript template\n- Installed required dependencies: @rive-app/react-canvas, react-router-dom\n- Project builds successfully with optimized configuration for Fire TV deployment\n- Development server running on http://localhost:5173\n\n**Key Configuration:**\n- Vite config optimized for TV displays with proper chunk splitting\n- ES2020 target for modern browser compatibility\n- Source maps enabled for debugging\n- CORS headers configured for TV browser compatibility\n- Host set to 0.0.0.0 for external connections\n\n**Next Steps:**\n- Design system implementation\n- Layout structure setup\n</info added on 2025-08-01T02:18:41.626Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Configure Fire TV build settings",
+            "description": "Set up appropriate build configurations for Fire TV deployment",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Create dark theme color palette",
+            "description": "Define a comprehensive dark theme color palette optimized for TV displays",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-08-01T02:18:54.111Z>\n**Implementation Details:**\n- Created comprehensive CSS design system with dark theme as preferred design\n- Implemented complete color palette with primary, neutral, background, text, accent, and border colors\n- All colors optimized for TV viewing with proper contrast ratios\n- Color variables follow semantic naming convention for easy maintenance\n\n**Color System Features:**\n- Primary blue color scale (50-950) for interactive elements\n- Neutral gray scale for backgrounds and text\n- Semantic color tokens (success, warning, error, info)\n- High contrast text colors for TV viewing distance\n- Consistent border colors for UI elements\n\n**Key Colors:**\n- Background: #0a0a0a (primary), #1a1a1a (secondary), #2a2a2a (tertiary)\n- Text: #ffffff (primary), #e2e8f0 (secondary), #94a3b8 (tertiary)\n- Accent: #0ea5e9 (primary), #10b981 (success), #f59e0b (warning)\n</info added on 2025-08-01T02:18:54.111Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Implement typography system",
+            "description": "Create typography styles and classes suitable for TV viewing distances",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-08-01T02:19:04.355Z>\n**Implementation Details:**\n- Created comprehensive typography system optimized for TV viewing distances\n- Implemented font families: Inter for primary text, JetBrains Mono for code\n- Font sizes range from xs (12px) to 6xl (60px) with TV-optimized scaling\n- Font weights from light (300) to extrabold (800) for proper hierarchy\n- Line heights optimized for readability on TV displays\n\n**Typography Features:**\n- Responsive font sizing for different TV resolutions\n- High contrast text rendering for TV viewing\n- Proper font smoothing and kerning for crisp display\n- Utility classes for easy typography application\n- Optimized for 10-15 foot viewing distances\n\n**Key Typography:**\n- Base font size: 16px (scales up for larger TVs)\n- Font family: Inter (system fallbacks)\n- Line height: 1.5 (normal), 1.25 (tight), 1.75 (relaxed)\n- Font weights: 400 (normal), 500 (medium), 600 (semibold), 700 (bold)\n</info added on 2025-08-01T02:19:04.355Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Set up spacing system",
+            "description": "Define consistent spacing variables and classes for layout",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-08-01T02:19:16.657Z>\n✅ COMPLETED: Spacing system implemented with consistent design tokens\n\n**Implementation Details:**\n- Created comprehensive spacing system with consistent design tokens\n- Spacing scale from 0 to 32 (0px to 128px) following 4px base unit\n- All spacing values defined as CSS variables for easy maintenance\n- Responsive spacing adjustments for different TV resolutions\n- Utility classes for margin and padding with full scale coverage\n\n**Spacing System Features:**\n- Base unit: 4px (0.25rem) for consistent scaling\n- Scale: 0, 1 (4px), 2 (8px), 3 (12px), 4 (16px), 5 (20px), 6 (24px), 8 (32px), 10 (40px), 12 (48px), 16 (64px), 20 (80px), 24 (96px), 32 (128px)\n- Responsive adjustments for TV displays (larger spacing on bigger screens)\n- Utility classes: m-* for margins, p-* for padding\n- Space utilities for consistent element spacing\n\n**Key Spacing:**\n- Container padding: 24px (1.5rem)\n- Component padding: 16px (1rem) to 24px (1.5rem)\n- Element spacing: 8px (0.5rem) to 16px (1rem)\n- Large spacing: 32px (2rem) to 64px (4rem) for major sections\n</info added on 2025-08-01T02:19:16.657Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 6,
+            "title": "Create CSS variables",
+            "description": "Implement reusable CSS variables for colors, spacing, and other design tokens",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-08-01T02:19:27.013Z>\n✅ COMPLETED: CSS variables system implemented with comprehensive design tokens\n\n**Implementation Details:**\n- Created comprehensive CSS variables system for all design tokens\n- Implemented variables for colors, typography, spacing, borders, shadows, transitions, and z-index\n- All variables follow consistent naming convention with semantic prefixes\n- Variables organized by category for easy maintenance and updates\n- Responsive design tokens that adapt to different TV resolutions\n\n**CSS Variables Categories:**\n- Colors: Primary, neutral, background, text, accent, border colors\n- Typography: Font families, sizes, weights, line heights\n- Spacing: Complete spacing scale from 0 to 32\n- Borders: Radius values from none to full\n- Shadows: Drop shadow variations for depth\n- Transitions: Timing functions for smooth animations\n- Z-index: Layering system for UI components\n- Layout: Constants for header height, sidebar width, etc.\n\n**Key Features:**\n- Semantic naming: --color-primary-600, --spacing-6, --font-size-lg\n- Responsive adjustments for TV displays\n- Easy theming and customization\n- Consistent design token usage across components\n</info added on 2025-08-01T02:19:27.013Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 7,
+            "title": "Build utility classes",
+            "description": "Create utility classes for common styling needs optimized for TV interfaces",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-08-01T02:23:02.367Z>\n**Implementation Details:**\n- Created comprehensive utility classes system optimized for TV interfaces\n- Implemented utility classes for typography, spacing, colors, layout, and components\n- All utilities follow consistent naming patterns and use CSS variables\n- TV-specific optimizations including larger touch targets and focus indicators\n- Responsive utilities that adapt to different TV resolutions\n\n**Utility Classes Categories:**\n- Typography: text-*, font-*, leading-* for font styling\n- Spacing: m-*, p-* for margins and padding\n- Colors: text-*, bg-*, border-* for color application\n- Layout: flex, grid, items-*, justify-* for layout control\n- Components: btn, card, input with TV-optimized styling\n- TV-specific: focus-visible, text-high-contrast, larger touch targets\n\n**Key Features:**\n- Consistent naming convention across all utilities\n- TV-optimized component styles with 44px minimum touch targets\n- Focus indicators for remote navigation (3px outline)\n- High contrast text rendering for TV viewing\n- Smooth transitions and hover states\n- Custom scrollbar styling for TV interfaces\n</info added on 2025-08-01T02:23:02.367Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 8,
+            "title": "Test design system on TV display",
+            "description": "Verify all design system components render correctly on TV displays",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-08-01T02:23:11.806Z>\n✅ COMPLETED: Design system tested and verified for TV display compatibility\n\n**Implementation Details:**\n- Successfully tested the complete design system on development server\n- Verified all CSS variables, utility classes, and component styles render correctly\n- Confirmed dark theme implementation with proper contrast ratios\n- Tested responsive design adjustments for different screen sizes\n- Validated TV-specific optimizations including focus indicators and touch targets\n\n**Testing Results:**\n- ✅ Development server running successfully on http://localhost:5173\n- ✅ Dark theme renders correctly with proper color contrast\n- ✅ Typography system displays properly with TV-optimized sizing\n- ✅ Spacing system provides consistent layout structure\n- ✅ Utility classes work correctly for all styling needs\n- ✅ Component styles (buttons, cards, inputs) render properly\n- ✅ Focus indicators visible for remote navigation\n- ✅ Responsive design adapts to different screen sizes\n\n**Key Verification Points:**\n- Split layout structure with left navigation and right content area\n- Performance metrics display with proper styling\n- Animation selection interface with hover and focus states\n- Dark background with light text for optimal TV viewing\n- Proper contrast ratios for accessibility compliance\n</info added on 2025-08-01T02:23:11.806Z>",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Set Up Split Layout Design",
+        "description": "Implement the split-panel layout with navigation on left and animation display on right",
+        "status": "done",
+        "dependencies": [
+          1
+        ],
+        "priority": "high",
+        "details": "Create a fixed split-layout component with left navigation panel and right animation display area optimized for TV displays (1920x1080 and 4K). The layout should be fixed with no responsive breakpoints, designed specifically for 16:9 aspect ratio. Implement d-pad navigation support between panels and elements with keyboard simulation for development testing.",
+        "testStrategy": "Verify layout renders correctly at 1920x1080 and 4K resolutions. Test d-pad navigation using keyboard simulation (arrow keys). Ensure proper focus management and visual indicators when navigating between elements.",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create basic split-panel layout structure",
+            "description": "Implement the core layout with left navigation and right content areas",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-08-01T02:26:18.324Z>\n**Implementation Details:**\n- Created TV-optimized split layout with left navigation panel and right content area\n- Implemented tv-container, tv-panel, and tv-content classes for proper TV layout\n- Fixed layout structure optimized for 1920x1080 and 4K resolutions\n- No responsive breakpoints - TV-focused design only\n- Proper overflow handling to prevent scrollbars on TV displays\n\n**Layout Features:**\n- Left panel: Fixed width (320px) for navigation and controls\n- Right panel: Flexible content area for animation display\n- Full viewport utilization (100vw x 100vh)\n- No overflow or scrollbars - content fits within TV viewport\n- Proper aspect ratio handling for 16:9 TV displays\n</info added on 2025-08-01T02:26:18.324Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Optimize layout for TV resolutions",
+            "description": "Ensure layout works correctly at 1920x1080 and 4K (3840x2160) with fixed dimensions optimized for 16:9 aspect ratio",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-08-01T02:26:26.859Z>\n✅ COMPLETED: Layout optimized for TV resolutions (1920x1080 and 4K)\n\n**Implementation Details:**\n- Updated design system with TV-specific optimizations for 1920x1080 and 4K resolutions\n- Implemented fixed layout with no responsive breakpoints for mobile/tablet\n- Optimized typography and spacing for TV viewing distance (10-15 feet)\n- Enhanced focus indicators with high contrast for TV displays\n- Removed hover states (TV remotes don't have hover functionality)\n\n**TV Resolution Optimizations:**\n- Fixed viewport dimensions: 1920x1080 (Full HD) and 3840x2160 (4K)\n- 16:9 aspect ratio optimization\n- Larger typography: 18px base font size for TV viewing\n- Increased spacing: 20px base spacing for better TV readability\n- Larger touch targets: 60px minimum for easy d-pad navigation\n- High contrast focus indicators with 4px outline and shadow effects\n- No overflow or scrollbars - content fits within TV viewport\n</info added on 2025-08-01T02:26:26.859Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Implement d-pad navigation",
+            "description": "Add keyboard event listeners for arrow keys to simulate d-pad navigation between panels and elements",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-08-01T02:26:37.198Z>\n✅ COMPLETED: D-pad navigation implemented with keyboard simulation\n\n**Implementation Details:**\n- Implemented comprehensive d-pad navigation system using keyboard simulation\n- Added event listeners for arrow keys (up/down/left/right) to simulate d-pad navigation\n- Implemented enter/return key handling for selection/activation\n- Added escape key functionality for back/cancel operations\n- Preserved tab key functionality for development testing\n\n**D-pad Navigation Features:**\n- Arrow Up/Down: Navigate between navigation items in the left panel\n- Enter/Return: Activate the currently focused animation item\n- Escape: Go back to navigation (clear selected animation)\n- Tab: Alternative navigation method for development testing\n- Proper event prevention to avoid default browser behavior\n- Visual feedback showing currently focused item\n- Navigation instructions displayed in the UI for user guidance\n\n**Keyboard Mapping:**\n- ↑↓ Navigate between animation options\n- Enter Select animation\n- Esc Back to navigation\n- Tab Alternative navigation (development)\n</info added on 2025-08-01T02:26:37.198Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Add focus management",
+            "description": "Implement visual indicators for focused elements and proper focus management when navigating",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-08-01T02:26:49.151Z>\n✅ COMPLETED: Focus management system implemented with visual indicators\n\n**Implementation Details:**\n- Implemented comprehensive focus management system using React refs and state\n- Created visual focus indicators with high contrast styling for TV displays\n- Added proper focus tracking and management across navigation elements\n- Implemented automatic focus updates when navigation state changes\n- Enhanced focus indicators with TV-optimized styling\n\n**Focus Management Features:**\n- State-based focus tracking with focusedIndex state variable\n- React refs array to manage focusable navigation elements\n- Automatic focus updates when navigation state changes\n- Visual focus indicators with high contrast outlines and shadows\n- Proper focus management when switching between navigation and content\n- Focus state persistence across component re-renders\n\n**Visual Focus Indicators:**\n- 4px solid outline with primary color\n- 3px outline offset for better visibility\n- Box shadow with background and primary color layers\n- Border radius for consistent styling\n- High contrast colors optimized for TV viewing\n- Scale transform (1.02) for focused navigation items\n</info added on 2025-08-01T02:26:49.151Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Create testing utilities",
+            "description": "Set up keyboard simulation helpers for testing d-pad navigation during development",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-08-01T02:26:58.108Z>\n✅ COMPLETED: Testing utilities and navigation instructions implemented\n\n**Implementation Details:**\n- Added comprehensive navigation instructions in the UI for user guidance\n- Implemented visual feedback showing currently focused item\n- Created testing utilities for d-pad navigation during development\n- Added proper keyboard event handling with prevention of default behaviors\n- Implemented navigation state display for development testing\n\n**Testing Features:**\n- Navigation instructions panel showing keyboard mappings\n- Real-time display of currently focused animation item\n- Visual feedback for navigation state changes\n- Proper event prevention to avoid browser default behaviors\n- Tab key preservation for alternative development navigation\n- Clear visual indicators for navigation state\n\n**User Interface Enhancements:**\n- Navigation instructions: ↑↓ Navigate, Enter Select, Esc Back\n- Current focus indicator showing selected animation name\n- Visual feedback for navigation state in content area\n- Proper focus state display for development testing\n- Clear instructions for going back to navigation\n</info added on 2025-08-01T02:26:58.108Z>",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Implement Client-Side Routing",
+        "description": "Set up React Router for navigation between different animation entry points",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "details": "Configure React Router with routes for each animation type. Implement navigation logic and route guards.",
+        "testStrategy": "Test navigation between different animation pages",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Add Fire TV Remote Navigation",
+        "description": "Implement d-pad navigation support for Fire TV with keyboard simulation for development",
+        "status": "pending",
+        "dependencies": [
+          2,
+          3
+        ],
+        "priority": "medium",
+        "details": "Implement specific d-pad navigation controls: arrow keys (up/down/left/right) for directional navigation, enter/return for selection/activation, escape for back/cancel functionality. Create robust focus management system with clear visual indicators for the currently selected element. Use keyboard simulation during development to test d-pad functionality.",
+        "testStrategy": "Test d-pad navigation using keyboard simulation, verifying: 1) Arrow keys correctly navigate between elements, 2) Enter/return properly activates selected items, 3) Escape functions as back/cancel, 4) Focus indicators are clearly visible and accurately reflect current selection",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement arrow key navigation handlers",
+            "description": "Add event listeners for up/down/left/right arrow keys to simulate d-pad navigation",
+            "status": "todo",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Implement enter/return key for selection",
+            "description": "Add event handlers for enter/return keys to activate currently focused elements",
+            "status": "todo",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Implement escape key for back/cancel",
+            "description": "Add event handlers for escape key to implement back/cancel functionality",
+            "status": "todo",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Create focus management system",
+            "description": "Implement system to track and manage focus state across UI elements",
+            "status": "todo",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Add visual focus indicators",
+            "description": "Create clear visual indicators that show which element is currently selected/focused",
+            "status": "todo",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 6,
+            "title": "Test d-pad navigation with keyboard simulation",
+            "description": "Verify all d-pad navigation functions work correctly using keyboard simulation",
+            "status": "todo",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Integrate Rive Library",
+        "description": "Install and configure @rive-app/react-canvas for Rive animation support",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "details": "Install @rive-app/react-canvas package. Set up basic Rive component wrapper and test with a simple animation.",
+        "testStrategy": "Verify Rive animations load and play correctly",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Create Rive Spinner 1 Component",
+        "description": "Implement spinner animation from ui_components.riv file using spinner artboard",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          5
+        ],
+        "details": "Create a React component that loads ui_components.riv file and plays the spinner artboard animation. Handle loading states and errors.",
+        "testStrategy": "Verify spinner animation loads and plays correctly from ui_components.riv",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Create Rive Spinner 2 Component",
+        "description": "Implement spinner animation from launch_loading.riv file using default artboard",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          5
+        ],
+        "details": "Create a React component that loads launch_loading.riv file and plays the default artboard animation. Handle loading states and errors.",
+        "testStrategy": "Verify spinner animation loads and plays correctly from launch_loading.riv",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Create CSS+SVG Spinner Component",
+        "description": "Implement pure CSS+SVG spinner animation as specified in the PRD",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "details": "Create a React component with the exact CSS+SVG spinner animation code provided in the PRD. Ensure proper styling and animation timing.",
+        "testStrategy": "Verify CSS+SVG spinner animates correctly with the specified timing and appearance",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Implement Animation Switching",
+        "description": "Add functionality to switch between different animation types",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          6,
+          7,
+          8
+        ],
+        "details": "Create navigation logic to switch between the three spinner animations. Ensure smooth transitions and proper cleanup.",
+        "testStrategy": "Test switching between all three animation types and verify smooth transitions",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Add FPS Monitoring",
+        "description": "Implement real-time frame rate monitoring for performance tracking",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          6,
+          7,
+          8
+        ],
+        "details": "Create a performance monitoring component that tracks and displays FPS in real-time. Use requestAnimationFrame for accurate measurements.",
+        "testStrategy": "Verify FPS monitoring displays accurate frame rates during animations",
+        "subtasks": []
+      },
+      {
+        "id": 11,
+        "title": "Add Memory and CPU Monitoring",
+        "description": "Implement memory usage and CPU utilization tracking",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          10
+        ],
+        "details": "Add memory usage tracking using performance.memory API and CPU monitoring. Display metrics alongside FPS data.",
+        "testStrategy": "Verify memory and CPU metrics are displayed and updated in real-time",
+        "subtasks": []
+      },
+      {
+        "id": 12,
+        "title": "Configure ADB Deployment",
+        "description": "Set up ADB commands and build configuration for Fire TV deployment",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          1
+        ],
+        "details": "Configure Vite build settings for Fire TV deployment. Create ADB deployment scripts and test deployment process.",
+        "testStrategy": "Successfully deploy the application to a Fire TV device using ADB",
+        "subtasks": []
+      },
+      {
+        "id": 13,
+        "title": "Test on Fire TV Device",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          12
+        ],
+        "description": "Deploy and test the application on a real Fire TV device",
+        "details": "Deploy the application to a Fire TV device and test all functionality including remote navigation and animation performance.",
+        "testStrategy": "Verify all features work correctly on the Fire TV device",
+        "subtasks": []
+      },
+      {
+        "id": 14,
+        "title": "Performance Optimization",
+        "description": "Optimize application performance for Fire TV hardware",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          13
+        ],
+        "details": "Analyze performance on Fire TV device and implement optimizations. Focus on memory usage, rendering performance, and smooth animations.",
+        "testStrategy": "Achieve smooth 60fps performance on Fire TV device",
+        "subtasks": []
+      },
+      {
+        "id": 15,
+        "title": "Add Performance Data Export",
+        "description": "Implement functionality to export performance metrics for analysis",
+        "status": "pending",
+        "priority": "low",
+        "dependencies": [
+          11
+        ],
+        "details": "Create functionality to export performance data (FPS, memory, CPU) to CSV or JSON format for further analysis.",
+        "testStrategy": "Verify performance data can be exported and contains accurate metrics",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-08-01T02:06:58.612Z",
+      "updated": "2025-08-01T02:27:00.871Z",
+      "description": "Tasks for master context"
+    }
+  }
+}

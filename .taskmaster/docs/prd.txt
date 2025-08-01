@@ -1,0 +1,195 @@
+# Product Requirements Document: Fire TV Animation Performance Benchmarking Tool
+
+## Project Overview
+A React-Vite test bed application designed to benchmark animation performance on Fire TV devices. The application provides a split-layout interface where users can select different animation entry points from a left panel and view the corresponding animations on the right side.
+
+## Target Platform
+- **Primary Target**: Amazon Fire TV devices
+- **Testing Method**: ADB (Android Debug Bridge) commands for real device testing
+- **Development Environment**: React + Vite for fast development and build optimization
+
+## Core Requirements
+
+### 1. Application Architecture
+- **Framework**: React 18+ with Vite as build tool
+- **Layout**: Split-panel design with navigation on left, animation display on right
+- **Routing**: Client-side routing for seamless animation switching
+- **State Management**: React Context or Zustand for global state
+- **Styling**: CSS modules or styled-components for component isolation
+
+### 2. User Interface Design
+- **Display Resolution**: Optimized for 1920x1080 (Full HD) and 4K (3840x2160) TV resolutions
+  - Fixed layout designed for TV aspect ratios (16:9)
+  - No responsive breakpoints for mobile/tablet - TV-focused design only
+  - High contrast elements optimized for 10-15 foot viewing distance
+- **Design System**: Implement a comprehensive CSS-based design system with dark theme as the preferred design
+  - Dark color palette with proper contrast ratios for TV viewing
+  - Large, readable typography optimized for TV viewing distances
+  - Consistent spacing and component styling for TV interfaces
+  - Reusable CSS variables and utility classes
+  - TV-specific design patterns and optimizations
+- **D-Pad Navigation**: Full support for TV remote d-pad navigation
+  - **Up/Down/Left/Right**: Navigate between focusable elements
+  - **Enter/Return**: Activate selected element (OK button simulation)
+  - **Escape**: Go back or cancel (if applicable)
+  - **Tab**: Alternative navigation method for development testing
+  - Clear visual focus indicators with high contrast outlines
+  - Logical tab order following visual layout
+  - No mouse hover states (TV remotes don't have hover)
+- **Left Panel**: Navigation menu with animation entry points
+  - Clean, minimal design optimized for d-pad navigation
+  - Clear visual indicators for current selection with high contrast styling
+  - Support for d-pad navigation with proper focus management
+  - Dark background with light text and accent colors
+  - Large touch targets (minimum 44px) for easy navigation
+- **Right Panel**: Animation display area
+  - Full-screen animation rendering at TV resolutions
+  - Performance metrics overlay positioned for TV viewing
+  - Consistent dark background for all animations
+  - Proper contrast for readability at viewing distance
+  - No scrollbars or overflow - content fits within viewport
+
+### 3. Animation Entry Points
+
+#### 3.1 Rive Spinner 1 (ui_components.riv)
+- **Source File**: `ui_components.riv`
+- **Artboard**: `spinner`
+- **Animation**: Default looping animation
+- **Purpose**: Benchmark Rive animation performance from UI components file
+
+#### 3.2 Rive Spinner 2 (launch_loading.riv)
+- **Source File**: `launch_loading.riv`
+- **Artboard**: Default artboard
+- **Animation**: Default looping animation
+- **Purpose**: Benchmark Rive animation performance from launch loading file
+
+#### 3.3 CSS + SVG Spinner
+- **Implementation**: Pure CSS + SVG animation
+- **Code Snippet**:
+```html
+<svg class="spinner" viewBox="0 0 100 100">
+  <circle class="spinner-arc" cx="50" cy="50" r="40" fill="none" stroke="#FFEC37" stroke-width="16" stroke-linecap="round"/>
+</svg>
+
+<style>
+  html, body {
+    background-color: black;
+  }
+  .spinner {
+    width: 120px;
+    height: 120px;
+    transform: rotate(-90deg);
+  }
+  .spinner-arc {
+    stroke-dasharray: 0, 250;
+    stroke-dashoffset: 250;
+    animation: trim 1.5s ease-in-out infinite;
+  }
+  @keyframes trim {
+    0% {
+      stroke-dasharray: 0, 250;
+      stroke-dashoffset: 250;
+    }
+    33% {
+      stroke-dasharray: 63, 250;
+    }
+    100% {
+      stroke-dasharray: 0, 250;
+      stroke-dashoffset: 0;
+    }
+  }
+</style>
+```
+
+## Technical Requirements
+
+### 4. Rive Integration
+- **Library**: @rive-app/react-canvas for React integration
+- **File Loading**: Dynamic loading of Rive files
+- **Artboard Selection**: Support for specific artboard selection
+- **Animation Control**: Play/pause/stop functionality
+- **Error Handling**: Graceful fallback for missing files or artboards
+
+### 5. Performance Monitoring
+- **FPS Monitoring**: Real-time frame rate display
+- **Memory Usage**: Track memory consumption during animations
+- **CPU Usage**: Monitor CPU utilization
+- **Metrics Storage**: Log performance data for analysis
+- **Export Functionality**: Export performance reports
+
+### 6. Fire TV Optimization
+- **Display Resolution**: Fixed layout for 1920x1080 and 4K TV resolutions
+  - No responsive design - TV-focused layout only
+  - 16:9 aspect ratio optimization
+  - High contrast elements for 10-15 foot viewing distance
+- **D-Pad Navigation**: Full support for TV remote d-pad navigation
+  - **Up/Down/Left/Right**: Navigate between focusable elements
+  - **Enter/Return**: Activate selected element (OK button)
+  - **Escape**: Go back or cancel
+  - **Tab**: Alternative navigation for development testing
+  - Clear visual focus indicators with high contrast outlines
+  - Logical tab order following visual layout
+  - No mouse hover states (TV remotes don't have hover)
+- **Performance**: Optimized for Fire TV hardware limitations
+- **Build Configuration**: Vite config optimized for Fire TV deployment
+- **ADB Integration**: Commands for device deployment and testing
+- **Development Testing**: Keyboard simulation of d-pad for local development
+
+## Development Phases
+
+### Phase 1: Core Application Setup
+1. Initialize React-Vite project with TypeScript
+2. Set up CSS design system with dark theme optimized for TV resolutions
+3. Set up routing and navigation structure
+4. Implement split-layout design with dark theme styling for 1920x1080/4K
+5. Add d-pad navigation support with keyboard simulation for development
+
+### Phase 2: Animation Implementation
+1. Integrate Rive library and load ui_components.riv
+2. Implement spinner artboard animation
+3. Load launch_loading.riv with default artboard
+4. Create CSS+SVG spinner animation
+5. Add animation switching functionality
+
+### Phase 3: Performance Monitoring
+1. Implement FPS monitoring
+2. Add memory and CPU usage tracking
+3. Create performance metrics overlay
+4. Build data logging and export functionality
+
+### Phase 4: Fire TV Testing
+1. Configure ADB deployment
+2. Test on real Fire TV device
+3. Optimize performance for TV hardware
+4. Validate remote navigation functionality
+
+## Success Criteria
+- All three animations load and display correctly
+- Smooth navigation between animation entry points
+- Performance metrics are accurately captured
+- Application runs smoothly on Fire TV device
+- Remote navigation works intuitively
+- Performance data can be exported for analysis
+
+## Future Enhancements
+- Additional animation types (Lottie, WebGL, etc.)
+- Automated performance testing
+- Performance comparison charts
+- Custom animation upload functionality
+- Network performance testing
+- Battery usage monitoring
+
+## Technical Constraints
+- Must work on Fire TV hardware specifications
+- Optimized for remote control navigation
+- Minimal memory footprint
+- Fast loading times
+- Cross-browser compatibility (for development)
+
+## Dependencies
+- React 18+
+- Vite
+- @rive-app/react-canvas
+- React Router
+- TypeScript
+- ADB tools for deployment 
