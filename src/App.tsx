@@ -4,10 +4,13 @@ import './App.css'
 import { RiveSpinner1 } from './components/RiveSpinner1'
 import { RiveSpinner2 } from './components/RiveSpinner2'
 import { CssSpinner } from './components/CssSpinner'
+import { PerformanceMetrics } from './components/PerformanceMetrics'
 
 function App() {
   const [selectedAnimation, setSelectedAnimation] = useState<string>('')
   const [focusedIndex, setFocusedIndex] = useState<number>(0)
+  const [showDetailedMetrics, setShowDetailedMetrics] = useState<boolean>(false)
+  const [monitoringEnabled, setMonitoringEnabled] = useState<boolean>(true)
   const navigationRefs = useRef<(HTMLButtonElement | null)[]>([])
 
   const animations = [
@@ -40,6 +43,18 @@ function App() {
         break
       case 'Tab':
         // Allow default tab behavior for development
+        break
+      case 'm':
+      case 'M':
+        // Toggle monitoring
+        event.preventDefault()
+        setMonitoringEnabled(prev => !prev)
+        break
+      case 'd':
+      case 'D':
+        // Toggle detailed metrics
+        event.preventDefault()
+        setShowDetailedMetrics(prev => !prev)
         break
       default:
         break
@@ -102,22 +117,8 @@ function App() {
         </nav>
 
         {/* Performance Metrics Section */}
-        <div className="tv-metrics mt-4">
-          <h3 className="text-base font-semibold tv-text mb-2">Performance</h3>
-          <div className="space-y-1 text-sm">
-            <div className="flex justify-between">
-              <span className="text-secondary">FPS:</span>
-              <span className="tv-text font-mono">60</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-secondary">Memory:</span>
-              <span className="tv-text font-mono">45MB</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-secondary">CPU:</span>
-              <span className="tv-text font-mono">12%</span>
-            </div>
-          </div>
+        <div className="mt-4">
+          <PerformanceMetrics enabled={monitoringEnabled} showDetails={showDetailedMetrics} />
         </div>
 
         {/* D-pad Navigation Instructions */}
@@ -127,6 +128,8 @@ function App() {
             <div>↑↓ Navigate</div>
             <div>Enter Select</div>
             <div>Esc Back</div>
+            <div>M Toggle Monitor</div>
+            <div>D Detailed Metrics</div>
           </div>
         </div>
       </div>
